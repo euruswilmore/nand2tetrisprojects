@@ -1,0 +1,16 @@
+
+
+CHIP Dec {
+    IN a,b,in;
+    OUT o0,o1,o2,o3;
+    
+    PARTS:
+    Not(in=a,out=p1);
+    Not(in=b,out=p2);
+    
+    And(a=p1,b=p2,out=o0);
+    And(a=p1,b=b,out=o1);
+    And(a=a,b=p2,out=o2);
+    And(a=a,b=b,out=o3);  
+    
+}
